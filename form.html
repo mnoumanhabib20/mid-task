@@ -1,34 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Registration Form</h2>
+    <!-- Navigation Links -->
+    <a href="index.html">Home</a> | <a href="form.html">Register</a>
+    
+    <h1>Student Registration</h1>
+    
     <form action="thanks.html" method="get">
-        <label for = "fn"><b>Full Name:</b></label><br>
-        <input type = "Text" id = "fn" placeholder="Full Name" required><br>
-        <label for = em><b>Email:</b></label><br>
-        <input type="Email" id = "em" placeholder="Email" required><br>
-        <label for = "nu"><b>Phone:</b></label><br>
-        <input type="tel" id="nu" placeholder="Phone" required><br>
-        <label for="ps"><b>Password:</b></label><br>
-        <input type="password" id="ps" placeholder="password" required><br>
-        <label><b>Gender:</b></label><br>
-        <input type="radio" name="Gender" value="Male">Male<br>
-        <input type="radio" name="Gender" value="Female">Female <br>
-        <label><b>Subjects</b></label><br>
-        <input type="checkbox" name="dept" value="Ai">Artificial Intelligence<br>
-        <input type="checkbox" name="dept" value="Se">Software Engineering<br>
-        <input type="checkbox" name="dept" value="Cs">Computer Science<br>
-        <input type="checkbox" name="dept" value="cys">Cyber Security<br>
-        <input type="checkbox" name="dept" value="It">Information Technology<br>
-        <label for="rem" aria-rowcount="5"><b>Additional Details</b></label><br>
-        <textarea type="text" id="rem" value="Additional Details" rows="5"></textarea><br>
-        <input type="submit" id="sub" value="Submit">
-        <input type="reset" id="reset" value="Reset">
+        <!-- Text Box (Required) -->
+        <label for="fn">Full Name:</label><br>
+        <input type="text" id="fn" name="fullname" placeholder="Your name" required><br><br>
+
+        <!-- Registration No -->
+        <label for="rn">Registration No:</label><br>
+        <input type="text" id="rn" name="regno" placeholder="F266..." required><br><br>
+
+        <!-- Email (Required) -->
+        <label for="em">Email:</label><br>
+        <input type="email" id="em" name="email" placeholder="abc@gmail.com" required><br><br>
+
+        <!-- Password -->
+        <label for="pw">Password:</label><br>
+        <input type="password" id="pw" name="password"><br><br>
+
+        <!-- Phone Number -->
+        <label for="ph">Phone:</label><br>
+        <input type="tel" id="ph" name="phone" placeholder="03XXXXXXXXX"><br><br>
+
+        <!-- Number with Min/Max -->
+        <label for="age">Age (16-40):</label><br>
+        <input type="number" id="age" name="age" min="16" max="40"><br><br>
+
+        <!-- Date Picker -->
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <!-- Radio Buttons (Same name for group selection) -->
+        <label>Gender:</label><br>
+        <input type="radio" id="m" name="gender" value="Male"> <label for="m">Male</label>
+        <input type="radio" id="f" name="gender" value="Female"> <label for="f">Female</label><br><br>
+
+        <!-- Drop-down List -->
+        <label for="dp">Department:</label><br>
+        <select id="dp" name="dept">
+            <option value="AI">AI</option>
+            <option value="CS">CS</option>
+            <option value="SE">SE</option>
+            <option value="EE">EE</option>
+        </select><br><br>
+
+        <!-- Checkboxes -->
+        <label>Interests:</label><br>
+        <input type="checkbox" id="w" name="interest" value="Web"> <label for="w">Web</label>
+        <input type="checkbox" id="ai" name="interest" value="AI"> <label for="ai">AI</label>
+        <input type="checkbox" id="g" name="interest" value="Games"> <label for="g">Games</label><br><br>
+
+        <!-- Textarea -->
+        <label for="msg">Address / Message:</label><br>
+        <textarea id="msg" name="message" rows="4" cols="30" placeholder="Enter details..."></textarea><br><br>
+
+        <!-- Submit & Reset Buttons -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
     </form>
 </body>
 </html>
